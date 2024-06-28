@@ -1,0 +1,20 @@
+@for (post of movies; track post.id_Movie) {
+        <div class="item__cover">
+            <img src="{{ post.cover }}" alt="">
+            <a href="details/{{ post.id_Movie }}" class="item__play">
+                <i class="ti ti-player-play-filled"></i>
+            </a>
+            <span class="item__rate item__rate--green">{{ post.note }}</span>
+            <button class="item__favorite" type="button">
+                <i class="ti ti-bookmark"></i>
+              </button>
+                    </div>
+        <div class="item__content">
+            <h3 class="item__title"><a href="details/{{ post.id_Movie }}">{{ post.titre }}</a></h3>
+            <span class="item__category">
+                <a href="#">{{ post.genre }}</a>
+                <a href="#">{{ post.dateDeSortie }}</a>
+            </span>
+        </div>
+   
+}

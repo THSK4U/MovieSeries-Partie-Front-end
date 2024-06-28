@@ -1,56 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
-  <style>
-    /* Your CSS styles here */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 5px;
-    }
-
-    h1 {
-      color: #333;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-
-    p {
-      color: #666;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      text-align: justify;
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: #ccc;
-      margin: 20px 0;
-    }
-
-  </style>
-</head>
-<body>
+<!-- header -->
+<header class="header">
   <div class="container">
-    <h1>{{title}}</h1>
-    <div class="divider"></div>
+    <div class="row">
+      <div class="col-12">
+        <div class="header__content">
+          <!-- header logo -->
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="">
+          </a>
+          <!-- end header logo -->
+
+          <!-- header nav -->
+          <ul class="header__nav">
+        
+          </ul>
+          <!-- end header nav -->
+
+          <!-- header auth -->
+          <div class="header__auth">
+            <form action="#" class="header__search">
+              <input class="header__search-input" type="text" placeholder="Search...">
+              <button class="header__search-button" type="button">
+                <i class="ti ti-search"></i>
+              </button>
+              <button class="header__search-close" type="button">
+                <i class="ti ti-x"></i>
+              </button>
+            </form>
+
+            <button class="header__search-btn" type="button">
+              <i class="ti ti-search"></i>
+            </button>
 
 
+            <a href="/MovieSeries" class="header__sign-in">
+              <i class="ti ti-login"></i>
+              <span>Sign out</span>
+            </a>
+          </div>
+          <!-- end header auth -->
+
+          <!-- header menu btn -->
+          <button class="header__btn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <!-- end header menu btn -->
+        </div>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</header>
+<!-- end header -->
+
+<!-- page title -->
+<section class="section section--first">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section__wrap">
+          <!-- section title -->
+          <h1 class="section__title section__title--head">Movie Catalog</h1>
+          <!-- end section title -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end page title -->
+
+
+<!-- catalog -->
+<div class="section section--catalog">
+  <div class="container">
+    <div class="row">
+      <!-- item -->
+      <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+      <div class="item">
+      <app-post></app-post>
+    </div>
+  </div>
+
+      <!-- end item -->
+
+</div>
+      </div>
+
