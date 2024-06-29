@@ -1,0 +1,23 @@
+<div class="row">
+@for (favorite of Favorite; track favorite.id_Movie) {
+    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+        
+        <div class="item">
+    <div class="item__cover">
+        <img src="{{ favorite.movie.cover }}" alt="">
+        <a href="details/{{ favorite.movie.id_Movie }}" class="item__play">
+            <i class="ti ti-player-play-filled"></i>
+        </a>
+        <span class="item__rate item__rate--green">{{ favorite.movie.note }}</span>
+                </div>
+    <div class="item__content">
+        <h3 class="item__title"><a href="details/{{ favorite.movie.id_Movie }}">{{ favorite.movie.titre }}</a></h3>
+        <span class="item__category">
+            <a href="#">{{ favorite.movie.genre }}</a>
+            <a href="#">{{ favorite.movie.dateDeSortie }}</a>
+        </span>
+    </div>
+        </div>
+    </div>
+}
+</div>

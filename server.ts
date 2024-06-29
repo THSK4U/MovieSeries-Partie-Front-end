@@ -4,6 +4,7 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
+import cors from 'cors';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -17,7 +18,17 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
+   // Enable CORS
+   server.use(cors({
+    origin: 'http://localhost:4200', // Allow requests from this origin
+  }));
+    // Example Express Rest API endpoints
+    server.post('/api/favorite', (req, res) => {
+      const favorite = req.body;
+      console.log('Received favorite:', favorite);
+      // Your logic here, e.g., save to database
+      res.status(200).send('Added to favorites');
+    });
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('**', express.static(browserDistFolder, {
@@ -52,6 +63,7 @@ function run(): void {
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
+  
 }
 
 run();

@@ -1,0 +1,27 @@
+<div class="row">
+@for (movies of movies; track movies.id_Movie) {
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+        
+    <div class="item">
+        <div class="item__cover">
+            <img src="{{ movies.cover }}" alt="">
+            <a href="details/{{ movies.id_Movie }}" class="item__play">
+                <i class="ti ti-player-play-filled"></i>
+            </a>
+            <span class="item__rate item__rate--green">{{ movies.note }}</span>
+            <button (click)="addToFavorites(movies.id_Movie, null, 1)" class="item__favorite" type="button">
+                <i class="ti ti-bookmark"></i>
+              </button>
+                    </div>
+        <div class="item__content">
+            <h3 class="item__title"><a href="details/{{ movies.id_Movie }}">{{ movies.titre }}</a></h3>
+            <span class="item__category">
+                <a href="#">{{ movies.genre }}</a>
+                <a href="#">{{ movies.dateDeSortie }}</a>
+            </span>
+        </div>
+    </div>
+</div>
+}
+</div>
