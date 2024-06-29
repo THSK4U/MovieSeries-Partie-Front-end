@@ -9,15 +9,16 @@
             <i class="ti ti-player-play-filled"></i>
         </a>
         <span class="item__rate item__rate--green">{{ series.note }}</span>
+        <span class="Saisons">{{ series.nombreSaisons }} Saisons</span>
         <button (click)="addToFavorites( null,series.id_Series, 1)" class="item__favorite" type="button">
             <i class="ti ti-bookmark"></i>
+                   
           </button>
                 </div>
     <div class="item__content">
         <h3 class="item__title"><a href="details/{{ series.id_Series }}">{{ series.titre }}</a></h3>
         <span class="item__category">
             <a href="#">{{ series.genre }}</a>
-            <a href="#">{{ series.nombreSaisons }}</a>
             <a href="#">{{ series.dateDeSortie }}</a>
         </span>
     </div>

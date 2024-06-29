@@ -17,7 +17,8 @@ export const routes: Routes = [
    {
     path:"favorite",
     component:FavoritesComponent
-   }
+   },
+   { path: 'favorite/Delete/:id', component:FavoritesComponent },
 ];
 
 @NgModule({

@@ -9,3 +9,18 @@
     padding-top: 100px;
     padding-bottom: 10px;
 }
+.Saisons{
+    position: absolute;
+top: 15px;
+right: 10px;
+color: aliceblue;
+background-color: rgba(26, 25, 31, 0.6);
+border: 5px solid transparent;
+border-radius: 10px;
+opacity: 1;
+transition: opacity 0.4s ease;
+}
+
+.item__cover:hover  .Saisons{
+    opacity: 0;
+}
